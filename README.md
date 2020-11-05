@@ -11,6 +11,8 @@
     - MongoDB: https://www.mongodb.com/try/download/enterprise
     
 ## Getting Started
+<img src="springinit.PNG">
+
 1. Go to https://start.spring.io/
     - Apply the following settings
         - <b>Project</b>: Maven
@@ -27,4 +29,35 @@
         - Spring Web
         - Spring Data JPA
 
-<img src="springinit.PNG">
+2. Click "Generate"
+3. Unzip the download to your working directory
+4. Manually add the following dependencies in pom.xml
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-validation</artifactId>
+    <version>2.3.3.RELEASE</version>
+</dependency>
+
+```
+- For projects using MySQL 
+```xml
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <scope>runtime</scope>
+</dependency>
+```
+
+- For projects using MongoDB
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-mongodb</artifactId>
+</dependency>
+```
+
+
+
+
+
