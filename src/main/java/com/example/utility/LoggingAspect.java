@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LoggingAspect
 {
-    private static final String POINTCUT = "execution(* com.microcenter.service.*Impl.*(..))";
+    private static final String POINTCUT = "execution(* com.example.service.*Impl.*(..))";
     private static final Log LOGGER = LogFactory.getLog(LoggingAspect.class);
 
     @AfterThrowing(pointcut = POINTCUT ,throwing = "exception")

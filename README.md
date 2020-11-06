@@ -57,6 +57,61 @@
 </dependency>
 ```
 
+## File Structure
+
+```bash
+com/example/api
+com/example/dto
+com/example/entity
+com/example/repository
+com/example/service
+com/example/utility
+```
+
+## Important Annotations
+
+- API
+    - @Autowired
+    - @RestController
+    - @CrossOrigin
+    - @RequestMapping
+    - @GetMapping
+    - @PostMapping
+    - @PutMapping
+    - @DeleteMapping
+    - @RequestBody
+    - @PathVariable
+    - @QueryParam
+
+- DTO
+    - @Data
+
+- Entity
+    - @Data
+    - @Entity
+    - @Id
+    - @GeneratedValue(strategy = GenerationType.IDENTITY)
+    - @Column 
+    
+- Repository
+    - none
+    
+- Service
+    - @Autowired
+    - @Service
+    - @Transactional
+    
+- Utility
+    - ErrorInfo
+        - @Data
+    - ExceptionControllerAdvice
+        - @RestControllerAdvice
+        - @Autowired
+        - @ExceptionHandler
+    - LoggingAspect
+        - @Component
+        - @Aspect
+        - @AfterThrowing
 
 
 
