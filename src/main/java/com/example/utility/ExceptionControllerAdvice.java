@@ -4,7 +4,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.http.HttpStatus;
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -22,9 +22,9 @@ public class ExceptionControllerAdvice
     {
         LOGGER.error(exception.getMessage(), exception);
         ErrorInfo err = new ErrorInfo(
-                HttpStatus.BAD_REQUEST.value(),
+                BAD_REQUEST.value(),
                 environment.getProperty(exception.getMessage()
                 ));
-        return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(err, BAD_REQUEST);
     }
 }

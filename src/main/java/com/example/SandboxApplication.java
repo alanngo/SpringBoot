@@ -1,10 +1,10 @@
 package com.example;
 
-import org.springframework.boot.SpringApplication;
+import static org.springframework.boot.SpringApplication.run;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SandboxApplication
 {
-	public static void main(String[] args) { SpringApplication.run(SandboxApplication.class, args); }
+	public static void main(String[] args) { run(SandboxApplication.class, args); }
 }

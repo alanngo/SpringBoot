@@ -1,0 +1,1 @@
+CREATE TABLE `sandbox_db`.`player` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR NOT NULL , `rating` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
