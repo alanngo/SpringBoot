@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/")
+@RequestMapping("")
 public class SandboxApi
 {
     @Autowired
