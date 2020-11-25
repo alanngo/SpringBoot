@@ -50,6 +50,7 @@
 ```
 
 - For projects using MongoDB
+- Do NOT use Spring Data JPA concurrently w/ this dependency
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
