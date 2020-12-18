@@ -9,7 +9,9 @@
 - Depending on your database, use one of the following
     - MySQL: https://www.apachefriends.org/download.html
     - MongoDB: https://www.mongodb.com/try/download/enterprise
-    
+- NOTE: This repository is for SQL-based projects. For MongoDB related projects, go to
+  https://github.com/alanngo/SpringBoot-Mongo
+  
 ## Getting Started
 <img src="springinit.PNG">
 
@@ -40,21 +42,11 @@
 </dependency>
 
 ```
-- For projects using MySQL 
 ```xml
 <dependency>
     <groupId>mysql</groupId>
     <artifactId>mysql-connector-java</artifactId>
     <scope>runtime</scope>
-</dependency>
-```
-
-- For projects using MongoDB
-- Do NOT use Spring Data JPA concurrently w/ this dependency
-```xml
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-data-mongodb</artifactId>
 </dependency>
 ```
 
@@ -136,15 +128,17 @@ ErrorInfo
 ```
 
 ExceptionControllerAdvice
+
 ```java
 // Class Based
 @RestControllerAdvice // allows the app to output errors to user in a useful manner
+@Slf4j // creates a logger variable automatically
 
 // Field Based
 @Autowired // dependency injection
 
 // Method Based
-@ExceptionHandler(value=Exception.class) // allows method to be called when exception is raised
+@ExceptionHandler(value = Exception.class) // allows method to be called when exception is raised
 ```
 
 LoggingAspect
@@ -155,6 +149,14 @@ LoggingAspect
 
 // Method Based
 @AfterThrowing(pointcut = "execution(CLASS_NAME)") // will execute after throwing exception
+```
+
+## Repository Layer
+```java
+public interface ExampleRepository extends CrudRepository<ENTITY, ID> 
+{
+    // SQL based programs use CrudRepository
+}
 ```
 
 
