@@ -60,6 +60,28 @@ com/example/repository
 com/example/service
 com/example/utility
 ```
+## Integrating Lombok
+##### IntelliJ:
+https://www.youtube.com/watch?v=RwX1x7_k1b0
+1. Depending on your OS
+   - Windows/ Linux: File -> Settings -> Plugins (Ctrl + Alt + S)
+   - Mac: IntelliJ Idea -> Preferences -> Plugins
+2. Click on 'Marketplace tab' and search 'lombok'
+3. Click Install
+4. Click Apply and restart IntelliJ
+
+######  Errors and Solutions :
+If you are getting
+``You aren't using a compiler supported by lombok, so lombok will not work and has been disabled``
+error, follow the steps below.
+
+1. Open Settings/Preferences -> Compiler
+2. Add ``-Djps.track.ap.dependencies=false`` to 'Shared build process VM options'
+3. Apply and OK
+4. Rerun your program
+
+https://i.stack.imgur.com/jwTAw.png
+    
 
 ## Important Annotations
 
@@ -158,6 +180,8 @@ public interface ExampleRepository extends CrudRepository<ENTITY, ID>
     // SQL based programs use CrudRepository
 }
 ```
+
+
 
 
 
