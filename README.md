@@ -168,6 +168,7 @@ LoggingAspect
 // Class Based
 @Component // denotes spring bean
 @Aspect // used for crosscutting concern
+@Slf4j // creates a logger variable automatically
 
 // Method Based
 @AfterThrowing(pointcut = "execution(CLASS_NAME)") // will execute after throwing exception
